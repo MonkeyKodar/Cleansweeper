@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Hemmabasen">
+<meta name="apple-mobile-web-app-title" content="Cleansweeper">
 <meta name="theme-color" content="#3dbf8a">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<title>Hemmabasen</title>
+<title>Cleansweeper</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -407,7 +407,7 @@ input.name-input::placeholder { color: rgba(255,255,255,0.5); }
 <!-- ONBOARDING -->
 <div class="onboard active" id="onboard">
   <div class="onboard-emoji">🧹</div>
-  <div class="onboard-title">Välkommen till Hemmabasen</div>
+  <div class="onboard-title">Välkommen till Cleansweeper</div>
   <div class="onboard-sub">Gör städning till ett spel. Samla XP, håll din streak och håll ditt hem i topptrim.</div>
   <input class="name-input" id="name-input" type="text" placeholder="Vad heter du?" maxlength="20">
   <button class="onboard-btn" onclick="startApp()">Starta äventyret →</button>
@@ -441,7 +441,7 @@ input.name-input::placeholder { color: rgba(255,255,255,0.5); }
   <div class="page active" id="page-home">
     <div class="header">
       <div class="header-greeting" id="home-greeting">God morgon!</div>
-      <div class="header-title" id="home-name">Hemmabasen</div>
+      <div class="header-title" id="home-name">Cleansweeper</div>
       <div class="header-sub" id="home-level">Nivå 1 · Stökigt näste</div>
       <div class="xp-wrap">
         <div class="xp-row">
@@ -654,7 +654,7 @@ const QUESTS = [
   {id:'weekly_boss',    name:'Veckoboss: Djuprengör',   meta:'Ugn + kylskåp · bonusbelöning',      xp:300, emoji:'🏆', featured:false, timer:2400},
 ];
 
-let state = JSON.parse(localStorage.getItem('hemmabasen') || 'null') || {
+let state = JSON.parse(localStorage.getItem('cleansweeper') || 'null') || {
   name: '',
   xp: 0,
   streak: 0,
@@ -677,7 +677,7 @@ let activeQuestId = null;
 let activeQuestXp = 0;
 
 function save() {
-  localStorage.setItem('hemmabasen', JSON.stringify(state));
+  localStorage.setItem('cleansweeper', JSON.stringify(state));
 }
 
 function getLevel() {
@@ -729,7 +729,7 @@ function updateUI() {
   const pct = nextLvl ? Math.min(100, ((state.xp - prevXp) / (nextXp - prevXp)) * 100) : 100;
 
   document.getElementById('home-greeting').textContent = getGreeting() + ', ' + (state.name || 'du') + '!';
-  document.getElementById('home-name').textContent = 'Hemmabasen';
+  document.getElementById('home-name').textContent = 'Cleansweeper';
   document.getElementById('home-level').textContent = 'Nivå ' + (lvl + 1) + ' · ' + lvlName;
   document.getElementById('xp-fill').style.width = pct + '%';
   document.getElementById('xp-current').textContent = state.xp + ' XP';
@@ -985,7 +985,7 @@ function startApp() {
 
 function resetApp() {
   if (confirm('Återställ all data?')) {
-    localStorage.removeItem('hemmabasen');
+    localStorage.removeItem('cleansweeper');
     location.reload();
   }
 }
