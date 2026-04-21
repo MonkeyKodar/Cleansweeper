@@ -1,32 +1,57 @@
-# Cleansweeper
+# 🧹 Cleansweeper
 
-> Turn your real-life cleaning routine into a game.
+> Förvandla din städrutin i verkliga livet till ett spel.
 
-Cleansweeper is a Progressive Web App (PWA) that gamifies home cleaning. Built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools, no fuss. Install it on your iPhone home screen in seconds.
+Cleansweeper är en Progressive Web App (PWA) som gör hemstädning roligare genom spelmekanik. Byggd med vanlig HTML, CSS och JavaScript — inga ramverk, inga byggverktyg, inget krångel. Installera den på hemskärmen på din iPhone på några sekunder.
 
-### Features
+---
 
-- **Room cycle tracking** — each room has its own cleaning schedule (kitchen every 2 days, bathroom every 3, bedroom every 7, etc.)
-- **XP & leveling system** — earn points for cleaning, lose points for neglecting rooms too long
-- **Daily quests** — timed cleaning challenges with XP rewards
-- **Streak counter** — tracks how many days in a row you've cleaned something
-- **Home levels** — your home progresses from "Messy Nest" through to "Gold Standard"
-- **Offline-ready** — service worker caches the app for use without internet
+## ✨ Funktioner
 
-### Tech stack
+- **Spårning av rumscykler**  
+  Varje rum har sitt eget städschema (kök varannan dag, badrum var tredje dag, sovrum var sjunde dag osv.)
 
-- Vanilla HTML/CSS/JavaScript
+- **XP- och nivåsystem**  
+  Tjäna poäng för städning och förlora poäng om rum försummas för länge.
+
+- **Dagliga uppdrag**  
+  Tidsbegränsade städutmaningar med XP-belöningar.
+
+- **Streak-räknare**  
+  Håller koll på hur många dagar i rad du har städat något.
+
+- **Hemnivåer**  
+  Ditt hem utvecklas från **Messy Nest** hela vägen till **Gold Standard**.
+
+- **Redo för offline-användning**  
+  Service worker lagrar appen så att den fungerar utan internet.
+
+---
+
+## 🛠️ Teknikstack
+
+- Vanilla HTML / CSS / JavaScript
 - PWA (manifest + service worker)
-- localStorage for data persistence
-- No dependencies, no build step
+- localStorage för datalagring
+- Inga beroenden
+- Inget byggsteg
 
-### Getting started
+---
 
-1. Clone or download this repo
-2. Deploy the three files (`index.html`, `manifest.json`, `sw.js`) to any static host
-3. Open in Safari on iPhone → Share → Add to Home Screen
-4. Start cleaning (and leveling up)
+## 🚀 Kom igång
 
-### Deployment
+1. Klona eller ladda ner detta repo  
+2. Publicera de tre filerna:
+   - `index.html`
+   - `manifest.json`
+   - `sw.js`
+3. Öppna i **Safari** på iPhone  
+4. Tryck på **Dela → Lägg till på hemskärmen**  
+5. Börja städa och levla upp 🎮
 
-This project is deployed via [Netlify](https://netlify.com). Any push to `main` triggers an automatic redeploy.
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/ditt-användarnamn/cleansweeper.git
