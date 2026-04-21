@@ -1,6 +1,6 @@
 {
-  "name": "Hemmabasen",
-  "short_name": "Hemmabasen",
+  "name": "Cleansweeper",
+  "short_name": "Cleansweeper",
   "description": "Gör städning till ett spel",
   "start_url": "./index.html",
   "display": "standalone",
@@ -19,4 +19,3 @@
       "type": "image/png"
     }
   ]
-}
